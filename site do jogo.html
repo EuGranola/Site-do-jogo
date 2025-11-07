@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Ossos do Ofício official site  <object data="" type=""></object></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #3e2411;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #804011;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #223828;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #a36421 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #a8683a !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #04330b !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: rgb(191, 90, 2) !important;
+  }
+  footer {
+    background-color: #545748;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #db9f75;
+  }
+  footer a:hover {
+    color: #804012;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Ossos do Ofício</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">INICIO</a></li>
+        <li><a href="#band">PREFÁCIO</a></li>
+        <li><a href="#tour">FASES</a></li>
+        <li><a href="#contact">CONTATO</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MAIS
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Storybords</a></li>
+            <li><a href="#">Tutorial</a></li>
+            <li><a href="#">Download do jogo</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-torget="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="ny.jpg" alt="New York" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>O começo</h3>
+          <p>The atmosphere in New York is lorem ipsum.</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="chicago.jpg" alt="Chicago" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Chicago</h3>
+          <p>Thank you, Chicago - A night we won't forget.</p>
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="la.jpg" alt="Los Angeles" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>LA</h3>
+          <p>Even though the traffic was a mess, we had the best time playing at Venice Beach!</p>
+        </div>      
+
+      </div>
+      <div class="item">
+        <img src="" alt="Los Angeles" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>STORY 4</h3>
+          <p>Even though the traffic was a mess, we had the best time playing at Venice Beach!</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="Gemini_Generated_Image_hv3gw1hv3gw1hv3g (1) - Editado.png" alt="Los Angeles" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>STORY 4</h3>
+          <p>Even though the traffic was a mess, we had the best time playing at Venice Beach!</p>
+        </div>      
+      </div>
+    </div>
+    </div>
+
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Container (The Band Section) -->
+<div id="band" class="container text-center">
+  <h3>PREFÁCIO</h3>
+  <p><em></em></p>
+  <p>O mundo foi devastado pela Grande Diezma (que matou 90% da população) e, em seguida, pelo Vírus Nêmesis, que reanima os mortos como Ecoantes.
+​O protagonista, Abel, acorda infectado por ambos, mas milagrosamente vivo:
+ as doenças se neutralizaram em seu corpo, tornando-o o único Hospedeiro Anômalo e a prova viva de que há cura.
+​Motivado pela culpa e pela esperança, Abel se torna um Boticário 
+Viajante com a missão de criar o Antídoto-Simbiótico para curar as
+ vítimas nos estágios iniciais do Nêmesis.
+​A jogabilidade é centrada na Alquimia e Botânica para coletar e processar
+ ingredientes, e crucialmente, na Matemática (medições precisas de peso, volume e temperatura). Um erro nas proporções pode acelerar
+ a transformação do paciente em Ecoante, adicionando grande tensão.</p>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Lílian (Líli)</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="WhatsApp Image 2025-11-06 at 18.32.34.jpeg" class="img-circle person" alt="" width="300" height="300">
+      </a>
+      <div id="demo" class="collapse">
+        <p>Pequenina energética</p>
+        <p>Ama pular corda, correr e praticar esportes</p>
+        <p>Tem 8 anos</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Abel</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="WhatsApp Image 2025-11-06 at 18.32.33.jpeg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo2" class="collapse">
+        <p>Cientista</p>
+        <p>Apresso por botânica e livros antigos de alquimia</p>
+        <p>Tem 19 anos</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>Maitê</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="WhatsApp Image 2025-11-06 at 21.30.32.jpeg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>Posturada</p>
+        <p>Gosta de tiro ao alvo e luta corpo a corpo</p>
+        <p>Tem 21 anos</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (TOUR Section) -->
+<div id="tour" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">FASES</h3>
+    <p class="text-center">Cenas principais do jogo<br> Mostrando por trás das cortinas!</p>
+    <!--Podemos colocar outras páginas direcionndo a vídeos ou alguma outra coisa relacionada a mecânica do jogo -->
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="WhatsApp Image 2025-11-06 at 19.28.31 (1).jpeg" alt="Paris" width="400" height="300">
+          <p><strong>Primeira fase</strong></p>
+          <p>Encontro com a criança</p>
+          
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="WhatsApp Image 2025-11-06 at 19.28.32.jpeg" alt="New York" width="400" height="300">
+          <p><strong>Primeira fase</strong></p>
+          <p>Resolva uma conta matemática </p>
+          
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="WhatsApp Image 2025-11-06 at 19.28.32 (1).jpeg" alt="San Francisco" width="400" height="300">
+          <p><strong>Primeira fase</strong></p>
+          <p>Cura da criança</p>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="WhatsApp Image 2025-11-06 at 19.38.14.jpeg" alt="San Francisco" width="400" height="300">
+          <p><strong>Segunda fase</strong></p>
+          <p>Resolva uma conta matemática</p>
+          
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="WhatsApp Image 2025-11-06 at 19.38.14 (1).jpeg" alt="San Francisco" width="400" height="300">
+          <p><strong>Segunda fase</strong></p>
+          <p>Fazendo antidoto</p>
+          
+        </div>
+      </div>
+       <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="WhatsApp Image 2025-11-06 at 19.40.57.jpeg" alt="San Francisco" width="400" height="300">
+          <p><strong>Segunda fase</strong></p>
+          <p>Distribuindo o antidoto</p>
+          
+        </div>
+      </div>
+      
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="WhatsApp Image 2025-11-06 at 19.40.57 (1).jpeg" alt="San Francisco" width="400" height="300">
+          <p><strong>Terceira fase</strong></p>
+          <p>Desafio balança</p>
+          
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="WhatsApp Image 2025-11-06 at 19.40.57 (2).jpeg" alt="San Francisco" width="400" height="300">
+          <p><strong>Terceira fase</strong></p>
+          <p>Desafio proveta</p>
+          
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="WhatsApp Image 2025-11-06 at 19.40.58.jpeg" alt="San Francisco" width="400" height="300">
+          <p><strong>Terceira fase</strong></p>
+          <p>Criação do antidoto</p>
+          
+        </div>
+      </div>
+  </div>
+  
+  <!-- Modal -->
+
+<!-- Container (Contact Section) -->
+ 
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+       
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="contact" class="container">
+  <h3 class="text-center">Contatos:</h3>
+  
+
+  <div class="row">
+    <div class="col-md-4">
+    <!--Colocar algo escrito para representar essas três informações-->
+      <p><span class="glyphicon glyphicon-map-marker"></span>Brasil, São Paulo</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Telefone: +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email:ossosdooficioraizes@gmail.com</p>
+    </div>
+   
+  <br>
+  <!--Colocar os nomes de todos do grupo ou algumas informações ou os storybords-->
+  <h3 class="text-center"></h3>  
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Anita Ginetti</a></li>
+    <li><a data-toggle="tab" href="#menu1">Beatriz Sati</a></li>
+    <li><a data-toggle="tab" href="#menu2">Clarice Generoso</a></li>
+    <li><a data-toggle="tab" href="#menu2">Gabriela de Paula</a></li>
+    <li><a data-toggle="tab" href="#menu2">Iago Braga</a></li>
+    <li><a data-toggle="tab" href="#menu2">Pedro Murilo Gonzaga</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h2>Mike Ross, Manager</h2>
+      <p>Man, we've been on the road for some time now. Looking forward to lorem ipsum.</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h2>Chandler Bing, Guitarist</h2>
+      <p>Always a pleasure people! Hope you enjoyed it as much as I did. Could I BE.. any more pleased?</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h2>Peter Griffin, Bass player</h2>
+      <p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p>
+    </div>
+    <div id="menu3" class="tab-pane fade ">
+      <h2>Mike Ross, Manager</h2>
+      <p>Man, we've been on the road for some time now. Looking forward to lorem ipsum.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="map.jpg" class="img-responsive" style="width:100%">
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <!--Colocar o nome do grupo ou só os direitos autorais-->
+  <p>Direito do grupo ...</p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
